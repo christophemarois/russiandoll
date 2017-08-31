@@ -1,0 +1,18 @@
+{
+  "name": "russiandoll",
+  "version": "1.0.0",
+  "description": "Interactive stories DSL",
+  "main": "index.js",
+  "repository": "https://www.github.com/christophemarois/russiandoll",
+  "author": "Christophe Marois",
+  "license": "MIT",
+  "scripts": {
+    "build-parser": "rollup src/parser/index.js --output.format cjs --output.file dist/parser.js",
+    "build-typer": "rollup src/typer/index.js --output.format cjs --output.file dist/typer.js",
+    "build": "npm run build-parser && npm run build-typer",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "rollup": "^0.49.2"
+  }
+}
